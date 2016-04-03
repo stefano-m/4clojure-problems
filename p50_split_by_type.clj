@@ -10,7 +10,7 @@
 
 
 (defn split-by-type [xs]
-  (map last (group-by type xs)))
+  (vals (group-by type xs)))
 
 (and
  (= (set (split-by-type [1 :a 2 :b 3 :c])) #{[1 2 3] [:a :b :c]})
